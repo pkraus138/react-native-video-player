@@ -442,6 +442,7 @@ export default class VideoPlayer extends Component {
           ]}
           ref={p => { this.player = p; }}
           muted={this.props.muted || this.state.isMuted}
+          ignoreSilentSwitch={this.props.ignoreSilentSwitch}
           paused={!this.state.isPlaying}
           onProgress={this.onProgress}
           onEnd={this.onEnd}
@@ -512,6 +513,7 @@ VideoPlayer.propTypes = {
   controlsTimeout: PropTypes.number,
   disableControlsAutoHide: PropTypes.bool,
   disableFullscreen: PropTypes.bool,
+  ignoreSilentSwitch: Video.propTypes.ignoreSilentSwitch,
   loop: PropTypes.bool,
   resizeMode: Video.propTypes.resizeMode,
   hideControlsOnStart: PropTypes.bool,
@@ -552,6 +554,7 @@ VideoPlayer.defaultProps = {
   videoHeight: 720,
   autoplay: false,
   controlsTimeout: 2000,
+  ignoreSilentSwitch: 'obey',
   loop: false,
   resizeMode: 'contain',
   disableSeek: false,

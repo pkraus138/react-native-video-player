@@ -32,6 +32,7 @@ react-native link react-native-vector-icons
 | loop                    | Loop the video after playback is done.                                                      |
 | resizeMode              | The video's resizeMode. defaults to contain and is passed to react-native-video.            |
 | hideControlsOnStart     | Hides the controls on start video.                                                          |
+| ignoreSilentSwitch      | The video's ignoreSilentSwitch. defaults to 'obey' and is passed to react-native-video.     |
 | endWithThumbnail        | Returns to the thumbnail after the video ends.                                              |
 | disableSeek             | Disable video seeking.                                                                      |
 | pauseOnPress            | Automatically pause/play when pressing the video player anywhere.                           |
